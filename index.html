@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нажми для кайфа 😏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body onclick="playSound()">
+    <h1>Нажми сюда 😏</h1>
+    <audio id="sound" src="https://www.myinstants.com/media/sounds/stony-10-312sh3-28288.mp3" loop></audio>
+
+    <script>
+        function playSound() {
+            let audio = document.getElementById("sound");
+            audio.volume = 1.0; // Максимальная громкость
+            audio.play().catch(error => console.error("Ошибка воспроизведения:", error));
+        }
+    </script>
+</body>
+</html>
